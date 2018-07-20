@@ -148,7 +148,7 @@ export class ApolloServerBase {
 
     //Add upload resolver
     if (this.uploadsConfig) {
-      const { GraphQLUpload } = require('apollo-upload-server');
+      const { GraphQLUpload } = require('./uploads');
       if (resolvers && !resolvers.Upload) {
         resolvers.Upload = GraphQLUpload;
       }
